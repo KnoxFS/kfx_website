@@ -14,7 +14,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="relative bg-gray-900">
+        <header className="relative bg-white">
             {/* Mobile header */}
             <div className="custom-screen md:hidden">
                 <div className="flex items-center justify-between py-5 md:block">
@@ -25,7 +25,7 @@ export default function Navbar() {
                         <button
                             role="button"
                             aria-label="Open the menu"
-                            className="text-gray-400 hover:text-gray-50"
+                            className="text-gray-600 hover:text-gray-900"
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             <svg
@@ -49,7 +49,7 @@ export default function Navbar() {
                     <div className="pb-5">
                         <ul className="space-y-4">
                             {navigation.map((item) => (
-                                <li key={item.name} className="text-gray-50">
+                                <li key={item.name} className="text-gray-800">
                                     <a className="block" href={item.href} onClick={() => setIsOpen(false)}>
                                         {item.name}
                                     </a>
@@ -68,10 +68,10 @@ export default function Navbar() {
                             <Image alt="KnoxFS logo" src="/mailgo.svg" width={150} height={50} />
                         </Link>
                     </div>
-                    <div className="flex-1 items-center mt-10 text-gray-300 md:font-medium md:mt-8 md:flex hidden">
+                    <div className="flex-1 items-center mt-10 text-gray-600 md:font-medium md:mt-8 md:flex hidden">
                         <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                             {navigation.map((item) => (
-                                <li key={item.name} className="text-gray-50">
+                                <li key={item.name} className="text-gray-800">
                                     <a className="block" style={{ cursor: 'pointer' }} href={item.href}>
                                         {item.name}
                                     </a>
