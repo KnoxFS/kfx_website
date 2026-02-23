@@ -14,7 +14,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="relative">
+        <header className="relative bg-gray-900">
             {/* Mobile header */}
             <div className="custom-screen md:hidden">
                 <div className="flex items-center justify-between py-5 md:block">
