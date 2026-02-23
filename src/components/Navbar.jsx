@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const navigation = [
     { name: 'Features', href: '#features' },
-    { name: 'Audit', href: '#audit' },
+    { name: 'Audit', href: 'https://github.com/solidproof/projects/blob/main/KnoxFS/SmartContract_Audit_Solidproof_WrappedKFX.pdf' },
     { name: 'Tokenomic', href: '#tokenomic' },
-    { name: 'Docs', href: '#docs' },
+    { name: 'Docs', href: 'https://knoxfs.gitbook.io/whitepaper-knoxfs/' },
     { name: 'Community', href: '#Community' },
 ];
 
@@ -50,7 +50,12 @@ export default function Navbar() {
                         <ul className="space-y-4">
                             {navigation.map((item) => (
                                 <li key={item.name} className="text-gray-800">
-                                    <a className="block" href={item.href} onClick={() => setIsOpen(false)}>
+                                    <a
+                                        className="block"
+                                        href={item.href}
+                                        onClick={() => setIsOpen(false)}
+                                        {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                    >
                                         {item.name}
                                     </a>
                                 </li>
@@ -72,7 +77,12 @@ export default function Navbar() {
                         <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                             {navigation.map((item) => (
                                 <li key={item.name} className="text-gray-800">
-                                    <a className="block" style={{ cursor: 'pointer' }} href={item.href}>
+                                    <a
+                                        className="block"
+                                        style={{ cursor: 'pointer' }}
+                                        href={item.href}
+                                        {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                    >
                                         {item.name}
                                     </a>
                                 </li>
